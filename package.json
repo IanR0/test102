@@ -1,0 +1,7 @@
+{
+  "name": "test102",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  }
+}
