@@ -6,6 +6,9 @@ grunt.initConfig({
     karma: {
       unit: {
         configFile: "test/karma.conf.js"
+      },
+      "coverage-report": {
+        configFile: "test/karma.coverage.conf.js"
       }
     }
   }
