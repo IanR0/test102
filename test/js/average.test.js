@@ -18,9 +18,9 @@ describe('average', function () {
       expected: 3
     },
     {
-      title: 'javascript cant count [.1,.2] == .3',
-      input: [.1,.2],
-      expected: .3
+      title: 'javascript cant count [.125,.25] == .375',
+      input: [.125,.25],
+      expected: .375
     }
   ];
 
