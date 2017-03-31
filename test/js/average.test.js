@@ -20,18 +20,20 @@ describe('average', function () {
   ];
 
   for(var a =0; a < testsData.length; a++) {
-    var testData = testsData[a];
-    it(testData.title, function () {
-      // Given
-      var input = testData.input;
-      var expected = testData.expected;
+    (function () {
+      var testData = testsData[a];
+      it(testData.title, function () {
+        // Given
+        var input = testData.input;
+        var expected = testData.expected;
 
-      // When
-      var output = window.average(input);
+        // When
+        var output = window.average(input);
 
-      // Then
-      assert.equal(output, expected);
-    });
+        // Then
+        assert.equal(output, expected);
+      });
+    })();
   }
 
 
