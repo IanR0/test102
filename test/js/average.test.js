@@ -14,7 +14,7 @@ describe('average', function () {
     },
     {
       title: 'ignores invalids casting array ["NOt A NUMBER", 3] == 3',
-      input: ["NOt A NUMBER", 3] == 3,
+      input: ["NOt A NUMBER", 3],
       expected: 3
     }
   ];
