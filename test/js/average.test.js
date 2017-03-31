@@ -1,9 +1,40 @@
+var assert = chai.assert;
+
 describe('average', function () {
-  it('should work', function () {
-    expect('foo').to.be.a('string')
+  it('empty [] == 0', function () {
+    // Given
+    var input = [];
+    var expected = 0;
+
+    // When
+    var output = window.average(input);
+
+    // Then
+    assert.equal(output, expected);
   });
-  it('should not work', function () {
-    expect('foo').to.be.a('number')
+
+  it('[1] == 1', function () {
+    // Given
+    var input = [1];
+    var expected = 1;
+
+    // When
+    var output = window.average(input);
+
+    // Then
+    assert.equal(output, expected);
+  });
+
+  it('[666] == 666', function () {
+    // Given
+    var input = [666];
+    var expected = 666;
+
+    // When
+    var output = window.average(input);
+
+    // Then
+    assert.equal(output, expected);
   });
 });
 
