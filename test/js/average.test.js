@@ -1,17 +1,39 @@
 var assert = chai.assert;
 
 describe('average', function () {
-  it('empty [] == 0', function () {
-    // Given
-    var input = [];
-    var expected = 0;
+  var testsData = [
+    {
+      title: 'empty [] == 0',
+      input: [],
+      expected: 0
+    },
+    {
+      title: 'auto casting array ["7563", 3] == 7566',
+      input: ["7563", 3],
+      expected: 7566
+    },
+    {
+      title: 'ignores invalids casting array ["NOt A NUMBER", 3] == 3',
+      input: ["NOt A NUMBER", 3] == 3,
+      expected: 3
+    }
+  ];
 
-    // When
-    var output = window.average(input);
+  for(var a =0; a < testsData.length; a++) {
+    var testData = testsData[a];
+    it(testData.title, function () {
+      // Given
+      var input = testData.input;
+      var expected = testData.expected;
 
-    // Then
-    assert.equal(output, expected);
-  });
+      // When
+      var output = window.average(input);
+
+      // Then
+      assert.equal(output, expected);
+    });
+  }
+
 
   it('[1] == 1', function () {
     // Given
